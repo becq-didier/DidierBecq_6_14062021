@@ -24,7 +24,21 @@ le frontend étant déjà fourni il est demandé de réaliser la partie backend 
 * [Lien vers le repo GitHub](https://github.com/OpenClassrooms-Student-Center/dwj-projet6)
 
 ## Installation
-### - FrontEnd
+
+### Création de la base de données sur MongoDB
+
+* Accédez au site Web de MongoDB et inscrivez-vous pour obtenir un compte gratuit. Une fois que vous avez accès à votre tableau de bord, créez un cluster puis configurez-le avec l'option AWS et uniquement les options gratuites afin de pouvoir développer gratuitement.
+* Pendant le démarrage de votre cluster, vous pouvez accéder à l'onglet Database Access. D'abord, vous devrez ajouter un utilisateur disposant de la capacité de lecture et d'écriture dans n'importe quelle base de données. Choisissez le nom d'utilisateur ainsi que le mot de passe de votre choix et notez-les, car vous en aurez besoin pour connecter votre API à votre cluster.
+* Vous devrez également accéder à l'onglet Network Access, cliquer sur Add IP Adress et autoriser l'accès depuis n'importe où (Add access from Anywhere).
+
+### Utilisation de variable d'evironnement avec le package dotenv
+
+* Créer un fichier .env à la racine du projet
+* Placer les variables suivantes avec les valeurs adéquates : 
+    * SECRET_KEY=*Votre_Key_Secret*
+    * MONGODB_CONNECT=*mongodb://[username:password@]host1[:port1][,...hostN[:portN]][/[defaultauthdb][?options]]*
+
+### Démarrer le FrontEnd 
 
 * Ouvrir le terminal sur l'emplacement du dossier
 * exécuter npm install pour installer les dépendances.
@@ -33,20 +47,20 @@ le frontend étant déjà fourni il est demandé de réaliser la partie backend 
 Pour démarrer le serveur exécuter l'instruction 'ng serve' dans le terminal.
 Le liens de l'application est : http://localhost:4200.
 
-### - Backend
+### Démarrer le Backend
+
 * Ouvrir le terminal sur l'emplacement du dossier
-* installer le pacge nodemon : npm install - nodemon
+* installer le package nodemon : npm install - nodemon
 * Lancez le serveur : nodemon server
 
-### - .env example
+### instruction
 
-
-### - instruction
-* Une fois les instruction exercuté rendz-vous dans votre navigateur à cette Url : http://localhost:4200
+* Une fois l'installation exercuté rendez-vous dans votre navigateur à cette Url : http://localhost:4200
 pour lancer l'application So Pekocko
 * Entrez votre email et votre mot de passe avec au minimum 8 caractères dont une majuscule, une minuscule, deux chiffres et sans espaces. Les mots de passes suivant sont bannis : 'Passw0rd', 'Password123'
 
 ## Dépendances utilisées pour le Backend
+
     "dependencies": {
         "bcrypt": "^5.0.1",
         "body-parser": "^1.19.0",
