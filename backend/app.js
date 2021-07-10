@@ -31,7 +31,7 @@ mongoose
 
 
 // Applique helmet à toute les demandes
-app.use(helmet);
+//app.use(helmet);
 // Objet middleware  (request + response + function next)
 // Ces headers permettent d'autoriser tout le monde à faire des requetes depuis son navigateur, retire erreur systèmes de sécurité CORS
 app.use((req, res, next) => {

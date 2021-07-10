@@ -2,7 +2,7 @@
 
 const Sauce = require("../models/Sauces");
 // fs pour avoir accé au opération sur les fichiers
-const fs = require('fs');
+const fs = require("fs-extra");
 
 //Middleware création de sauce
 exports.createSauce = (req, res, next) => {

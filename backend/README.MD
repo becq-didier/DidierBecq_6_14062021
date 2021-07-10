@@ -67,7 +67,7 @@ pour lancer l'application So Pekocko
         "dotenv": "^10.0.0",
         "express": "^4.17.1",
         "express-rate-limit": "^5.2.6",
-        "fs": "0.0.1-security",
+        "fs-extra": "^10.0.0",
         "helmet": "^4.6.0",
         "jsonwebtoken": "^8.5.1",
         "mongoose": "^5.12.12",
